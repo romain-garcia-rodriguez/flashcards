@@ -1,12 +1,16 @@
 // Dependencies
 import React from 'react';
+import {Provider} from 'react-redux'
 import Routing from './routing/index'
+import store from './store'
 
 function App() {
   return (
-    <div>
-      <Routing />
-    </div>
+    <Provider store={store}>
+      <div>
+        <Routing />
+      </div>
+    </Provider>
   );
 }
 
